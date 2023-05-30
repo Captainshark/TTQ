@@ -2,9 +2,24 @@
 #include <iostream>
 #include <string>
 
-int main() {
-    std::string output = "H" + std::to_string(2) + "W" + std::to_string(8) + "+" + std::to_string(3) + "Q" + std::to_string(6);
-    std::cout << output << std::endl;
+std::string generateOutput() {
+    std::string output;
+    
+    output += "H";
+    output += std::to_string(2);
+    output += "W";
+    output += std::to_string(9);
+    output += "+";
+    output += std::to_string(2 * 13);
+    output += "F";
+    
+    return output;
+}
 
+int main() {
+    std::string result = generateOutput();
+    std::cout << result << std::endl;
+    
     return 0;
 }
+
